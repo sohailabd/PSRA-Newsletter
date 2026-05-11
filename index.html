@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PSRA Newsletter – May 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+/*
+  FONTS
+  Body copy : Open Sans (Google Fonts) — matches source exactly
+  Captions  : Industry Bold Italic (commercial). All section header images
+              already contain the Industry font baked in — no substitution needed.
+*/
+:root {
+  --navy:    #3a3f6b;
+  --pink:    #ffe6e9;
+  --white:   #ffffff;
+  --body:    'Open Sans', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #c5c8d2;
+  font-family: var(--body);
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── WRAPPER ─── */
+.nl {
+  width: 100%;
+  max-width: 600px;
+  margin: 24px auto 48px;
+  background: var(--white);
+  box-shadow: 0 6px 40px rgba(0,0,0,.22);
+}
+
+/* ─── UTILITY ─── */
+/* Full-bleed image — stretches 100% with no gaps */
+.fw { width: 100%; height: auto; display: block; line-height: 0; }
+
+/* ─────────────────────────────────────
+   HEADER
+   Full-width bordered logo box
+───────────────────────────────────── */
+.header img { width: 100%; height: auto; display: block; }
+
+/* ─────────────────────────────────────
+   HERO
+   Referees photo — full bleed, title baked into image
+───────────────────────────────────── */
+.hero img { width: 100%; height: auto; display: block; }
+
+/* ─────────────────────────────────────
+   PRESIDENT BODY TEXT
+   White background, Open Sans, 14px, line-height 25px
+───────────────────────────────────── */
+.president {
+  background: var(--white);
+  padding: 20px 28px 24px;
+}
+.president p {
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+.president p:last-child { margin-bottom: 0; }
+.president a { color: var(--navy); font-weight: 600; text-decoration: none; }
+
+/* ─────────────────────────────────────
+   NEW MEMBERS
+   Full-width pink (#ffe6e9) background.
+   The band image (gradient pill) sits INSIDE the pink area
+   with ~25px padding on left/right/top. Names sit below it
+   on the same pink background with left padding ~38px.
+───────────────────────────────────── */
+.nm-section {
+  background: var(--pink);
+  padding: 18px 24px 24px;
+}
+.nm-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 14px;
+}
+.nm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px 0;
+  padding: 0 12px;
+}
+.nm-name {
+  font-family: var(--body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #111;
+}
+
+/* ─────────────────────────────────────
+   COMMITTEE UPDATES
+   Image has ~26px white margins on L/R — white bg wrapper
+   then body text in white section below
+───────────────────────────────────── */
+.committee-wrap {
+  background: var(--white);
+  padding: 0 px;
+  line-height: 0;
+}
+.committee-wrap img { width: 100%; height: auto; display: block; border-radius: 6px; }
+
+.body-sec {
+  background: var(--white);
+  padding: 18px 28px 22px;
+}
+.body-sec p {
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+.body-sec p:last-child { margin-bottom: 0; }
+.body-sec strong { font-weight: 700; }
+.body-sec a { color: var(--navy); font-weight: 600; text-decoration: none; }
+.body-sec ul {
+  list-style: none;
+  margin: 4px 0 12px;
+  padding: 0;
+}
+.body-sec ul li {
+  font-size: 14px;
+  line-height: 25px;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 3px;
+  text-align: justify;
+}
+.body-sec ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--navy);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────
+   KNOW YOUR CONTRACT
+   Full-width gradient band image, then white body
+───────────────────────────────────── */
+.kyc-band img { width: 100%; height: auto; display: block; }
+
+/* ─────────────────────────────────────
+   MEMBER'S SPOTLIGHT
+   Pink (#ffe6e9) background throughout.
+   Image has ~26px pink margins on L/R baked in — sits inside pink bg.
+   Intro text and Q&A all on same pink bg, no gap, no white.
+───────────────────────────────────── */
+.spotlight-section {
+  background: var(--pink);
+}
+.spotlight-section .sp-img-wrap {
+  padding: 0 26px;
+  line-height: 0;
+}
+.spotlight-section .sp-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.spotlight-section .sp-intro {
+  padding: 16px 28px 0;
+}
+.spotlight-section .sp-intro p {
+  font-size: 14px;
+  line-height: 25px;
+  text-align: justify;
+}
+.spotlight-section .qna {
+  padding: 14px 28px 24px;
+}
+.qa { margin-bottom: 14px; }
+.qa:last-child { margin-bottom: 0; }
+.qa-q {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+}
+.qa-a {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: justify;
+}
+
+/* ─────────────────────────────────────
+   PSRA IN THE COMMUNITY
+   Gradient band image (full width), then white body
+───────────────────────────────────── */
+.community-band img { width: 100%; height: auto; display: block; }
+
+.community-body {
+  background: var(--white);
+  padding: 18px 28px 22px;
+}
+.community-body p {
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+.community-body p:last-child { margin-bottom: 0; }
+.community-body a { color: var(--navy); font-weight: 600; text-decoration: none; }
+.community-body strong { color: var(--navy); font-weight: 700; }
+
+.photos-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 14px 0;
+}
+.photos-2col img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 4px;
+}
+.photo-wide { margin: 14px 0; }
+.photo-wide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* ─────────────────────────────────────
+   DATES TO KNOW
+   Full-width gradient band image, then white body
+───────────────────────────────────── */
+.dates-band img { width: 100%; height: auto; display: block; }
+.dates-body {
+  background: var(--white);
+  padding: 16px 28px 22px;
+}
+.dates-body ul { list-style: none; padding: 0; }
+.dates-body ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 6px;
+}
+.dates-body ul li:last-child { margin-bottom: 0; }
+.dates-body ul li::before {
+  content: "•";
+  color: var(--navy);
+  font-size: 17px;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+.dates-body ul li span { color: var(--navy); font-weight: 700; }
+
+/* ─────────────────────────────────────
+   GAME DAY / SEND PHOTOS
+   Full-width gradient band image (left-aligned text), then white body
+───────────────────────────────────── */
+.gameday-band img { width: 100%; height: auto; display: block; }
+.gameday-body {
+  background: var(--white);
+  padding: 16px 28px 22px;
+}
+.gameday-body p {
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+.gameday-body p:last-child { margin-bottom: 0; }
+.gameday-body a { color: #111; }
+
+/* ─────────────────────────────────────
+   FOOTER
+   Bordered logo box — full width
+───────────────────────────────────── */
+.footer img { width: 100%; height: auto; display: block; }
+
+/* ─────────────────────────────────────
+   RESPONSIVE — MOBILE
+───────────────────────────────────── */
+@media (max-width: 500px) {
+  .nm-grid { grid-template-columns: 1fr; }
+  .photos-2col { grid-template-columns: 1fr; }
+  .photos-2col img { height: 220px; }
+  .nm-section,
+  .president,
+  .body-sec,
+  .community-body,
+  .dates-body,
+  .gameday-body { padding-left: 16px; padding-right: 16px; }
+  .committee-wrap,
+  .spotlight-section .sp-img-wrap { padding-left: 12px; padding-right: 12px; }
+  .spotlight-section .sp-intro,
+  .spotlight-section .qna { padding-left: 16px; padding-right: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="nl">
+
+  <!-- ══════════════════════════════
+       HEADER — bordered logo
+  ══════════════════════════════ -->
+  <div class="header">
+    <img src="images/header.png" alt="PSRA – Professional Soccer Referees Association – Through Unity, Strength"/>
+  </div>
+
+  <!-- ══════════════════════════════
+       HERO — referees photo, title baked in
+  ══════════════════════════════ -->
+  <div class="hero">
+    <img src="images/headerAsset 3-100.jpg" alt="Message from PSRA President Peter Manikowski"/>
+  </div>
+
+  <!-- ══════════════════════════════
+       PRESIDENT MESSAGE BODY
+  ══════════════════════════════ -->
+  <div class="president">
+    <p>Each May at PSRA, we focus on and remember Huntington&#8217;s disease awareness. For those of you who didn&#8217;t know our now-passed brother and colleague, Terry Vaughn, I wanted to take a minute to reflect.</p>
+    <p>Terry passed away a few years ago from HD. This terrible disease took Terry from working the MLS playoffs to being unable to stand in a matter of years. But no matter what happened with Terry&#8217;s physical abilities, his heart and support for his family and refereeing friends never changed.</p>
+    <p>Like several of you, I worked with Terry on some really challenging MLS and international matches. What I will remember most about those matches, however, is the smile and hug that went around the locker room post-match.</p>
+    <p>As each of us was coming up through lower-level refereeing, one of the reasons we might have stayed in the game after a rough patch was the friends and really cool people we worked with along the way. Terry was one of the best.</p>
+    <p>I encourage each Member to honor Terry and learn about HD in your own way &#8212; something as simple as putting your phone in a drawer and challenging your refereeing brother or sister to a game of ping pong in the hotel (while wearing a blue wristband). From this, you might come to make a true friend for every future step in life.</p>
+    <p><a href="#"><a href="https://www.instagram.com/reel/DXzHHqNO5sP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Check out our message on HD on social media.</a></a></p>
+    <p>For Terry and for his spirit of teamwork that lives on &#8211;<br/>Through Unity, Strength.</p>
+    <p>Peter Manikowski</p>
+  </div>
+
+  <!-- ══════════════════════════════
+       NEW MEMBERS
+       Pink bg (#ffe6e9) wraps both the gradient pill image AND the names below.
+       The pill image already has pink padding baked in on its left/right/top.
+  ══════════════════════════════ -->
+  <div class="nm-section">
+    <img src="images/committee updatesAsset 5-8.png" alt="New Members: Welcome to PSRA!"/>
+    <div class="nm-grid">
+      <div class="nm-name">Twayne Anderson</div>
+      <div class="nm-name">Killian Richardson</div>
+      <div class="nm-name">Edson Carvajal</div>
+      <div class="nm-name">Christopher Slane</div>
+      <div class="nm-name">Josephine Amelia Graytock</div>
+      <div class="nm-name">Patrick Slane</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       COMMITTEE UPDATES
+       Image is NOT edge-to-edge — white bg with ~26px side padding.
+       "COMMITTEE UPDATES" text is baked into the image.
+  ══════════════════════════════ -->
+  
+  <div class="committee-wrap">
+    <img src="images/committee updatesAsset 4-100.jpg" alt="Committee Updates"/>
+  </div>
+  <div class="body-sec">
+    <p><strong>Nominations &amp; Voting Committee:</strong> The NVC administered one vote that emanated from the General Membership Meeting in January. No other committee activity occurred this quarter.</p>
+    <p><strong>Issues &amp; Grievances Committee:</strong> Processed three grievances. Continued to take member questions on all CBA items (both Units). Continued advising Board on CBA issues and member inquiries. Always open to questions and hypothetical scenarios!</p>
+    <p><strong>New Member Committee:</strong> In Q1 2026, PSRA admitted 2 new members to the Association.</p>
+    <p><strong>Media Committee:</strong> In Q1, the media committee Begin working on content for the remainder of the year at preseason camp and beyond. We thank those who participated. Looking forward, we plan on keeping an updated list of games that our members are working at the World Cup on our social media channels for easy reference. We hope this is an easy bookmark you can use to see when your peers are working.</p>
+    <p><strong>Medical Committee:</strong> Continued assisting members with questions related to PRO medical.</p>
+    <p><strong>Financial Planning Committee:</strong> No update this quarter.</p>
+    <p><strong>BU2 Negotiating Committee:</strong></p>
+    <ul>
+      <li>Surveyed the membership for bargaining priorities.</li>
+      <li>Worked with Attorney Lucas Middlebrook on strategy and presentation of bargaining sessions.</li>
+      <li>Began negotiations on April 7&#8211;8. The next bargaining session is scheduled for early May.</li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════
+       KNOW YOUR CONTRACT
+       Full-width gradient band image, then white body text
+  ══════════════════════════════ -->
+  <div class="kyc-band">
+    <img src="images/kyc.png" alt="Know Your Contract"/>
+  </div>
+  <div class="body-sec">
+    <p>Both the BU1 and BU2 contracts provide a monthly tech stipend to account for using personal devices for PRO work.</p>
+    <p>The BU1 stipend for ARs, VARs, and AVARs is $27.55 a month in 2026. All BU2 Officials are all eligible for their stipend of $27.32 a month.</p>
+    <p>These stipends should be submitted monthly via Emburse, and can be included on an expense report with a match for simplicity. A receipt is not required. If the system asks for a receipt, just enter &#8220;Personal tech stipend&#8221; in the text box.</p>
+  </div>
+
+  <!-- ══════════════════════════════
+       MEMBER'S SPOTLIGHT
+       Entire section — image + intro text + Q&A — sits on pink (#ffe6e9) bg.
+       The spotlight image itself has ~26px pink side margins baked in.
+       Text starts directly below image with no white gap.
+  ══════════════════════════════ -->
+  <div class="spotlight-section">
+    <div class="sp-img-wrap">
+      <img src="images/drewAsset 2.png" alt="Member&#8217;s Spotlight: Drew Klemp"/>
+    </div>
+    <div class="sp-intro">
+      <p>We&#8217;re shining the spotlight on one of our Kansas City colleagues whose journey to the professional ranks is rooted in passion, perspective, and a whole lot of humility. Get to know the person behind the badge.</p>
+    </div>
+    <div class="qna">
+      <div class="qa">
+        <p class="qa-q">Q: Where are you from?</p>
+        <p class="qa-a">A: Kansas City, Kansas, and I&#8217;m still based there. It&#8217;s home. You&#8217;ve got kind people, incredible BBQ, and some really cool attractions like the National WWI Museum, the Negro Leagues Baseball Museum, and the National Jazz Museum.<br/>And I&#8217;ll say it loud: the best BBQ is at Q39. Best burnt ends in the country. I&#8217;ve tried Texas and North Carolina. Kansas City wins. [Editor&#8217;s Note: The views expressed by Drew Klemp do not necessarily reflect the views of PSRA or its Membership.]</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">Q: What was your first professional match, and what stood out to you?</p>
+        <p class="qa-a">A: June 2021, an NWSL match in Kansas City, about 10 minutes from the house where I grew up. My whole family came out. That part meant everything. The match itself was smooth, but what I remember most is working alongside veteran officials who had supported me for years.</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">Q: What is something you take seriously every single match without exception?</p>
+        <p class="qa-a">A: I pray. Every match, and usually during the national anthem. It&#8217;s my time to recenter and prepare for the decisions ahead. No matter the level, that moment is non-negotiable for me.</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">Q: What&#8217;s one lesson the game has taught you that applies off the field?</p>
+        <p class="qa-a">A: Accountability and humility. There&#8217;s this perception that referees won&#8217;t admit mistakes. I&#8217;m the opposite, sometimes to a fault. If I get something wrong, I want to own it. I&#8217;ve done that in matches, and I&#8217;ve done it after reviewing film. You have to learn from it and move forward.</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">Q: What do you do when you&#8217;re not wearing the badge?</p>
+        <p class="qa-a">A: I&#8217;m a physical therapist. I&#8217;m in the clinic Monday through Friday, seeing about 12 patients a day. Then I hop on a plane for my &#8220;soccer nightlife.&#8221; My patients love hearing the stories.</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">Q: What&#8217;s the #1 thing your patients ask you?</p>
+        <p class="qa-a">A: &#8220;How do you deal with everyone yelling at you?&#8221; Honestly, there&#8217;s no simple answer. Over time, you learn what&#8217;s frustration versus what&#8217;s personal. Most of the time, it&#8217;s not personal. It comes with the badge.</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">Q: Pre-match, do you prefer music or silence?</p>
+        <p class="qa-a">A: Music and conversation, all the way. I&#8217;m smiles, good vibes, and 2010s pop. If someone else needs silence, that&#8217;s cool &#8212; but I&#8217;m bringing the energy.</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">Q: What excites you most about being a member of PSRA?</p>
+        <p class="qa-a">A: The unity. Even with people I&#8217;ve just met, there&#8217;s a shared connection. Everyone&#8217;s engaged, whether it&#8217;s social media, emails, or committees. I was working under PRO for a few years before joining the bargaining unit, and honestly, it was advice from Chris Penso over dinner that pushed me to make the jump. He said it&#8217;s about supporting your fellow officials, and he was right.</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">Q: Anyone you want to shout out?</p>
+        <p class="qa-a">A: Absolutely. Brian Marshall and Matt Rodman have been huge resources &#8212; I ask them questions all the time. And big shoutout to Jon Freeman and Kyle Atkins &#8212; great friends, mentors, and advocates as I&#8217;ve worked my way up. Kansas City has a tight group. We get together every few weeks, grab a drink, stay connected. That community means everything.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       PSRA IN THE COMMUNITY
+       Full-width gradient band, then white body with photos
+  ══════════════════════════════ -->
+  <div class="community-band">
+    <img src="images/community.png" alt="PSRA in the Community"/>
+  </div>
+  <div class="community-body">
+    <p><a><strong>PSRA Making a Difference for Officials in Ukraine</strong></a><br>
+Led by Sergii Boiko, PSRA Members came together to donate much-needed officiating gear for soccer officials in Ukraine. The donations were gratefully received and are already being utilized by officials working matches under incredibly challenging circumstances. This effort reflects the strength of the global officiating community and PSRA&#8217;s commitment to supporting fellow officials both on and off the field.</p>
+    <div class="photos-2col">
+      <img src="images/uk1.jpg" alt="Ukraine Officials"/>
+      <img src="images/uk2.jpg" alt="Ukraine Referees"/>
+    </div>
+    <div class="photo-wide">
+      <img src="images/uk3.jpg" alt="Ukraine Kids with Donated Gear"/>
+    </div>
+    <p>PSRA Member and FIFA Official <a><strong>Alexis Billeter</strong></a> (in green) is helping identify and train referees who wish to advance through her leadership of the Florida Soccer Referees Women&#8217;s Academy. Thank you, Alex, for all you do for the future of the game!</p>
+    <div class="photo-wide">
+      <img src="images/alexis.jpg" alt="Alexis Billeter with FL Women's Academy"/>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       DATES TO KNOW
+       Full-width gradient band, then white body
+  ══════════════════════════════ -->
+  <div class="dates-band">
+    <img src="images/dates.png" alt="Dates to Know"/>
+  </div>
+  <div class="dates-body">
+    <ul>
+      <li><span>HD Awareness in May:</span> Wear your blue H.D. wristbands proudly!</li>
+      <li><span>Post-World Cup assignments for MLS</span> will come out starting June 23.</li>
+      <li><span>Reminder:</span> Block your time for June and July now if you&#8217;re taking time off.</li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════
+       MEMBERS: SEND GAME DAY PHOTOS
+       Full-width gradient band (text left-aligned), then white body
+  ══════════════════════════════ -->
+  <div class="gameday-band">
+    <img src="images/gameday.png" alt="Members: Send in photos from game day!"/>
+  </div>
+  <div class="gameday-body">
+    <p>Send yours to <a href="mailto:media@psraofficials.org">media@psraofficials.org</a> &#8211; we want to feature you on our social channels.</p>
+    <p>Thank you,<br/>PSRA</p>
+  </div>
+
+  <!-- ══════════════════════════════
+       FOOTER — bordered logo box
+  ══════════════════════════════ -->
+  <div class="footer">
+    <img src="images/footer.png" alt="PSRA – Professional Soccer Referees Association – Through Unity, Strength"/>
+  </div>
+
+</div><!-- /.nl -->
+</body>
+</html>
